@@ -1,0 +1,20 @@
+public int maxSpan(int[] nums) {
+   int maxspan = Integer.MIN_VALUE;
+   for(int i = 0 ; i < nums.length ; i++){
+     int j = nums.length - 1;
+     while(j >= 0 && nums[i] != nums[j]){
+       j--;
+     }
+     int count = 0;
+     for(int k = i ; k <= j ; k++){
+       count++;
+     }
+     if(count > maxspan){
+       maxspan = count;
+     }
+   }
+   if(maxspan < 0){
+     return 0;
+   }
+   return maxspan;
+}
