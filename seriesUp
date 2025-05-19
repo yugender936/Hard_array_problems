@@ -1,0 +1,13 @@
+public int[] seriesUp(int n) {
+  int m = n*(n+1)/2;
+  int[] arr = new int[m];
+  int k = 0;
+  
+  for(int i = 1 ; i <= n ; i++){
+    for(int l = 1 ; l <= i ; l++){
+        arr[k] = l;
+        k++;
+    }
+  }
+  return arr;
+}
